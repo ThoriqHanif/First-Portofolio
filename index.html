@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
     <!-- Akhir Bootsrap Icon -->
 
+    <!-- AOS  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Akhir AOS -->
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -50,10 +54,11 @@
     <!-- Akhir Navbar -->
     <!-- Jumbotron -->
     <section class="jumbotron text-center">
-      <img src="img/PicsArt_10-01-10.40.13.jpg" alt="Thoriq Hanif" width="150" class="rounded-circle mb-4" />
+      <img src="img/PicsArt_10-01-10.40.13.jpg" alt="Thoriq Hanif" width="150" class="rounded-circle mb-4"/>
+      
 
       <h1 class="display-4" style="color: white;">Thoriq Hanif</h1>
-      <p class="lead" style="color: white;">Student | Creator Digital</p>
+      <p class="lead" style="color: white;"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -66,15 +71,15 @@
 
     <!-- About -->
     <section id="About">
-      <div class="container">
+      <div class="container" >
         <div class="row text-center mb-4">
           <div class="col">
             <h2>About Me</h2>
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4 pb-3">Enthusiastic and highly motivated RPL student with leadership skills, initiative and looking for new challenges. Experienced in various internal and external school organizations</div>
-          <div class="col-md-4 pb-3">
+          <div class="col-md-4 pb-3"data-aos="fade-down" data-aos-duration="1000">Enthusiastic and highly motivated RPL student with leadership skills, initiative and looking for new challenges. Experienced in various internal and external school organizations</div>
+          <div class="col-md-4 pb-3"data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
             <p>I am a student of SMK majoring in RPL. During one year of study I played a role in learning basic programming to create software, websites, etc.</p>
           </div>
         </div>
@@ -94,12 +99,12 @@
       <div class="container">
         <div class="row text-center mb-5" style="color: white;">
           <div class="col">
-            <h2>Project Plan</h2>
+            <h2>Projects Plan</h2>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3 text-center">
-            <div class="card">
+            <div class="card"data-aos="fade-up" data-aos-duration="500">
               <img src="img/Project/Project 1.jpg" class="card-img-top" alt="Project 1" />
               <div class="card-body">
                 <p class="card-text">Make My Portofolio Website</p>
@@ -107,15 +112,15 @@
             </div>
           </div>
           <div class="col-md-4 mb-3 text-center">
-            <div class="card">
-              <img src="img/Project/christopher-gower-m_HRfLhgABo-unsplash(1).jpg" class="card-img-top" alt="Project 2" />
+            <div class="card"data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+              <img src="img/Project/Project 2.jpg" class="card-img-top" alt="Project 2" />
               <div class="card-body">
-                <p class="card-text">want to create a startup / team to make software or websites or anything with me?</p>
+                <p class="card-text">Create Game 2D with my freinds</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3 text-center">
-            <div class="card">
+            <div class="card"data-aos="fade-up"data-aos-duration="500" data-aos-delay="200">
               <img src="img/Project/headway-5QgIuuBxKwM-unsplash.jpg" class="card-img-top" alt="Project 3" />
               <div class="card-body">
                 <p class="card-text">want to create a startup / team to make software or websites or anything with me?</p>
@@ -123,7 +128,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3 text-center">
-            <div class="card">
+            <div class="card"data-aos="fade-up"data-aos-duration="500" data-aos-delay="300">
               <img src="img/Project/bench-accounting-C3V88BOoRoM-unsplash.jpg" class="card-img-top" alt="Project 4" />
               <div class="card-body">
                 <p class="card-text">want to create a startup / team to make software or websites or anything with me?</p>
@@ -131,7 +136,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3 text-center">
-            <div class="card">
+            <div class="card"data-aos="fade-up"data-aos-duration="500" data-aos-delay="400">
               <img src="img/Project/nikita-kachanovsky-OVbeSXRk_9E-unsplash.jpg" class="card-img-top" alt="Project 5" />
               <div class="card-body">
                 <p class="card-text">want to create a startup / team to make software or websites or anything with me?</p>
@@ -201,6 +206,22 @@
     <!-- Akhir Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('.lead', {duration: 2, delay: 1.5, text: 'Student | Creator Digital'});
+      gsap.from('.jumbotron img',{duration: 1, y: -100, opacity: 0, ease: 'bounce'});
+      gsap.from('.navbar', { duration: 1.5, y: '-100%', opacity: 0});
+      gsap.from('.display-4', {duration: 1, x: -50, opacity: 0, delay: 0.5, ease: 'back'});
+    </script>
+  
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbxC9CYVWrW5mnYCngd047sPPzDQwVd5wZhaJmKHmFoky1cGsWcWfxb41nwR7Jkz0BrL/exec";
       const form = document.forms["WPU-Contact-Form"];
